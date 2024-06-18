@@ -1,0 +1,50 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'October 2023 – Present',
+        company: 'RDCOM Argentina (Remote)',
+        title: 'Backend Developer',
+        description: 'Lideré el desarrollo de microservicios serverless en AWS Lambda con Python, mejorando la eficiencia operativa y reduciendo costos. Implementé capas de seguridad avanzadas utilizando AWS Cognito y API Gateway, garantizando la protección de datos. Optimicé pipelines CI/CD con GitHub y AWS Amplify, acelerando los despliegues y minimizando tiempos de inactividad. Diseñé arquitecturas escalables y modulares, facilitando la integración continua.',
+        techstack:'Python, AWS, Salesforce. Habilidades adicionales: Salesforce (Core, HealthCloud, Service, Apex, LWC, Triggers, SOQL, Force Platform, Apex REST)',
+        link: '',
+    },
+    {
+        date: 'June 2022 – October 2023',
+        company: 'Ctech - Cambalache Technologies Argentina (Remote)',
+        title: 'Backend Developer',
+        description: 'Desarrollé microservicios serverless en AWS Lambda utilizando Python y NodeJs, mejorando la flexibilidad y capacidad de respuesta del sistema. Implementé capas de seguridad robustas con AWS Cognito y API Gateway, asegurando la integridad de los datos. Mejoré el flujo de trabajo de integración continua con GitHub y Amplify, reduciendo errores y acelerando los despliegues. Diseñé arquitecturas eficientes y escalables, proporcionando soluciones innovadoras y sostenibles. Integré APIs externas, facilitando el acceso a datos críticos y mejorando la funcionalidad.',
+        techstack: 'Python, NodeJS, Salesforce (Core, HealthCloud, Apex, LWC, Triggers, SOQL, Force Platform, Apex REST),Integraciones con SOAP',
+        link: '',
+    },
+    {
+        date: 'June 2021 – June 2022',
+        company: 'Zentricx Argentina (Remote)',
+        title: 'Software Developer',
+        description: 'Desarrollé microservicios utilizando Cloud Functions con Python y NodeJs, mejorando la respuesta y escalabilidad del sistema.Implementé medidas de seguridad avanzadas con GCP Firebase, garantizando la protección de aplicaciones. Integré APIs externas, facilitando el acceso a datos críticos y mejorando la funcionalidad. Gestioné pipelines CI/CD con Bitbucket, aumentando la eficiencia del desarrollo y despliegue. Diseñé arquitecturas robustas y escalables, impulsando el crecimiento del proyecto.',
+        techstack: 'Python, Flask, NodeJS, ReactJS, Firebase, GCP(Triggers, Pub/Sub, VisionAI, BigQuery, CloudRun, Jitsi, ReactJS, VMs, Apache)',
+        link: '',
+    },
+    {
+        date: 'September 2018 – June 2021',
+        company: 'Loopsys SD Argentina (Hybrid - onsite and remote)',
+        title: 'Analyst Programmer Consultant',
+        description: 'Desarrollé y mantuve procesos automatizados, mejorando significativamente la eficiencia operativa. Realicé análisis de Big Data utilizando Python, proporcionando insights valiosos para la toma de decisiones estratégicas. Asesoré en la transformación digital de divisiones de negocio, implementando soluciones automatizadas que incrementaron la productividad.',
+        techstack: 'VBScript, Python, RPA (Bots). Habilidades adicionales: PostgreSQL, MS SQL, Big Data',
+        link: '',
+    }
+];
+
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ) )
+    }
+ 
+</ol>
