@@ -21,26 +21,26 @@ const { description, title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="px-4">
+  <body>
     <div class="relative h-full w-full bg-slate-950">
       <div
-        class="absolute bottom-0 left-[-10%] top-[-10%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+        class="absolute bottom-0 left-[-10%] top-[-10%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none"
       >
       </div>
       <div
-        class="absolute bottom-0 right-[-10%] top-[-10%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+        class="absolute bottom-0 right-[-10%] top-[-10%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none"
       >
       </div>
       <div
-        class="absolute bottom-[120%] right-[20%] top-[20%] h-[1200px] w-[1200px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+        class="absolute bottom-[120%] right-[20%] top-[20%] h-[1200px] w-[1200px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] pointer-events-none"
       >
       </div>
-
     
-    <Header />
-    <slot />
-    <Footer/>
-  </div>
+    
+      <Header />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
 <style is:global>
@@ -61,6 +61,13 @@ const { description, title } = Astro.props;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+  }
+
+  /* Estilo para resaltar el nav */
+  .active-nav {
+    @apply bg-yellow-200; /* Clase de Tailwind para color de fondo amarillo */
+    @apply transition duration-1000; /* Transición de color de fondo con duración de 0.5 segundos */
+    @apply ease-in-out; /* Efecto de aceleración y desaceleración */
   }
 
   @media (prefers-reduced-motion: reduce) {

@@ -1,80 +1,127 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from  '../icons/LinkedIn.astro';
-import GitHubIcon from  '../icons/GitHub.astro';
-import MailIcon from  '../icons/Mail.astro';
-import SocialPill from  '../icons/SocialPill.astro';
-import Experience from '../components/Experience.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Briefcase from '../icons/Briefcase.astro';
-import ProjectIcon from '../icons/ProjectIcon.astro';
-import Projects from '../components/Projects.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import MailIcon from "../icons/Mail.astro";
+import SocialPill from "../icons/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import ProjectIcon from "../icons/ProjectIcon.astro";
+import Projects from "../components/Projects.astro";
+import About from "../components/AboutMe.astro";
 ---
 
-
-<Layout title="Portfolio de Fran Wata Sosa - Developer Backend y Programador Cloud Serverless"
-	description='Contrata a Fran Wata Sosa Desarrollador backend y programador cloud serverless especializado en soluciones escalables, eficientes y seguras para apps modernas. '
+<Layout
+  title="Portfolio de Fran Wata Sosa - Developer Backend y Programador Cloud Serverless"
+  description="Contrata a Fran Wata Sosa Desarrollador backend y programador cloud serverless especializado en soluciones escalables, eficientes y seguras para apps modernas. "
 >
-	<main px-4>
-		<SectionContainer class="py-44 pb-32">
-			<div class="flex gap-x-6 mt-7">
-				<div class="size-16">
-					<img 
-						class="rounded-full mb-4"
-						src="/pic_profile.jpeg" 
-						alt="myself photo" />
+  <main px-4>
+    <SectionContainer class="py-44 pb-32">
+      <div class="flex gap-x-6 mt-7">
+        <div class="size-16">
+          <img
+            class="rounded-full mb-4"
+            src="/pic_profile.jpeg"
+            alt="myself photo"
+          />
+        </div>
 
-				</div>
+        <Badge> Open to hire! </Badge>
+      </div>
+      <span></span>
+      <h1
+        class="text-white text-3xl md-4xl lg:text-5xl font-bold flex justisfy-center flex-row
+				gap-x-4 pb-6 lg:pb-10 mt-2"
+      >
+        Hey!, soy Fran 'Wata' Sosa
+      </h1>
+      <h2 class="text-xl text-2xl text-wrap max-w-[700px]">
+        <span> +5 años de experiencia. </span>
+        <span class="text-yellow-200/90"> Desarrollador backend. </span>
 
-				<Badge> Open to hire! </Badge>
+        <span class="text-red-200/90">
+          De Buenos Aires, viviendo en Cordoba, Argentina.
+        </span>
+        Orientado en soluciones cloud serverless y HealthCloud/HealthCare tanto en
+        AWS como GCP.
+		<p>
+		<br />
+		Enfocado siempre en la calidad y la seguridad del software. Utilizando las mejores prácticas en la industria para asegurar que los
+		productos no solo cumplan con los requisitos funcionales, sino que también sean robustos, escalables y seguros. Comprometido con el aprendizaje continuo 
+		y la mejora personal, buscando constantemente mejorar el trabajo y aportar más valor a los proyectos en los que participo.
+		</p>
+      </h2>
+      <nav id="contact" class="flex gap-4 mt-7 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/francisco-sosa-cv">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/franwatafaka">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:franciscososa91@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          franciscososa91@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="Experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
 
-			</div>
-			<span></span>
-			<h1 class="text-white text-3xl md-4xl lg:text-5xl font-bold flex justisfy-center flex-row
-				gap-x-4 pb-6 lg:pb-10 mt-2">
-				Hey!, soy Fran 'Wata' Sosa 
-			</h1>
-			<h2 class="text-xl text-2xl  text-wrap max-w-[700px]">
-				<span> +5 años de experiencia. </span>
-				<span class="text-yellow-200/90">
-					Desarrollador backend. 
-				</span> 
-			
-				<span class="text-red-200/90 "> De Buenos Aires, viviendo en Cordoba, Argentina. </span> 
-					Orientado en soluciones cloud serverless y HealthCloud/HealthCare
-					tanto en AWS como GCP.
-			</h2>
-			<nav class="flex gap-4 mt-7 flex-wrap"> 
-				<SocialPill href="https://www.linkedin.com/in/francisco-sosa-cv">
-					<LinkedInIcon class="size-4  md:size-6" />
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/franwatafaka">
-					<GitHubIcon class="size-4  md:size-6" />
-					GitHub
-				</SocialPill>
-				<SocialPill href="mailto:franciscososa91@gmail.com">
-					<MailIcon class="size-4  md:size-6" />
-					franciscososa91@gmail.com
-				</SocialPill>
-			</nav>
-		</SectionContainer>
-		<SectionContainer id="Experience" >
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-			<Briefcase class="size-7"/>
-				Experiencia Laboral
-			</h2>
-			 <Experience  />
-		</SectionContainer>
-
-		<SectionContainer id="Projects" >
+    <!-- <SectionContainer id="Projects" >
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 			<ProjectIcon class="size-10"/>
 				Proyectos
 			</h2>
 			 <Projects  />
-		</SectionContainer>
-	</main>
+		</SectionContainer> -->
+    <SectionContainer id="About">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <!-- <About class="size-7"/> -->
+        Sobre mi
+      </h2>
+      <About />
+    </SectionContainer>
+
+    <script>
+     // Espera a que el DOM esté completamente cargado
+	 document.addEventListener('DOMContentLoaded', () => {
+      // Busca el enlace que redirige a la sección de contacto
+      const contactLink = document.querySelector('a[href="#contact"]');
+      // Busca todos los SocialPill dentro del nav
+      const socialPills = document.querySelectorAll('nav#contact .active-socialpill');
+
+      // Añade un evento click al enlace encontrado
+      if (contactLink) {
+        contactLink.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevenir comportamiento predeterminado del enlace
+          
+          // Simular redirección (aquí puedes cambiarlo según tu estructura de página)
+          window.location.href = '#contact';
+          
+          // Añadir clase para resaltar todos los SocialPill dentro del nav
+          socialPills.forEach(item => {
+            item.classList.add('bg-yellow-200');
+          });
+          
+          // Remover la clase después de 2 segundos (opcional)
+          setTimeout(() => {
+            socialPills.forEach(item => {
+              item.classList.remove('bg-yellow-200');
+            });
+          }, 2000);
+        });
+      }
+    });
+    </script>
+  </main>
 </Layout>
