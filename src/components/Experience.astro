@@ -1,0 +1,63 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'October 2023 – Present',
+        company: 'RDCOM Argentina (Remote)',
+        title: 'Backend Developer',
+        description: 'Desarrollo de microservicios serverless en AWS Lambda con Python, mejorando la eficiencia operativa y reduciendo costos. Uso de capas de seguridad avanzadas utilizando AWS Cognito y API Gateway, garantizando la protección de datos. Optimización de pipelines CI/CD con GitHub y AWS Amplify, acelerando los despliegues y minimizando tiempos de inactividad. Diseño de arquitecturas escalables y modulares, facilitando la integración continua.',
+        techstack:['Python','AWS','Salesforce'],
+        aditionalskills: 'Salesforce (Core, HealthCloud, Service, Apex, LWC, Triggers, SOQL, Force Platform, Apex REST)',
+        link: '',
+    },
+    {
+        date: 'June 2022 – October 2023',
+        company: 'Ctech - Cambalache Technologies Argentina (Remote)',
+        title: 'Backend Developer',
+        description: 'Desarrollo de microservicios serverless en AWS Lambda utilizando Python y NodeJs, mejorando la flexibilidad y capacidad de respuesta del sistema. Uso de capas de seguridad robustas con AWS Cognito y API Gateway, asegurando la integridad de los datos. Mejoras en el flujo de trabajo de integración continua con GitHub y Amplify, reduciendo errores y acelerando los despliegues. Diseño de arquitecturas eficientes y escalables, proporcionando soluciones innovadoras y sostenibles.',
+        techstack:['Python','NodeJS','AWS','Integraciones con SOAP','Salesforce'], 
+        aditionalskills: '(Core, HealthCloud, Apex, LWC, Triggers, SOQL, Force Platform, Apex REST)',
+        link: '',
+    },
+    {
+        date: 'June 2021 – June 2022',
+        company: 'Zentricx Argentina (Remote)',
+        title: 'Software Developer',
+        description: 'Desarrollo de microservicios utilizando Cloud Functions con Python y NodeJs, mejorando la respuesta y escalabilidad del sistema. Uso de medidas de seguridad avanzadas con GCP Firebase, garantizando la protección de aplicaciones. Integración de APIs externas, facilitando el acceso a datos críticos y mejorando la funcionalidad. Gestión de pipelines CI/CD con Bitbucket, aumentando la eficiencia del desarrollo y despliegue. Diseño de arquitecturas robustas y escalables, impulsando el crecimiento del proyecto.',
+        techstack:['Python','Flask','NodeJS','ReactJS','Firebase','GCP'],
+        aditionalskills:'(Triggers, Pub/Sub, VisionAI, BigQuery, CloudRun, Jitsi, ReactJS, VMs, Apache)',
+        link: '',
+    },
+    {
+        date: 'September 2018 – June 2021',
+        company: 'Loopsys SD Argentina (Hybrid - onsite and remote)',
+        title: 'Analyst Programmer Consultant',
+        description: 'Desarrollo y mantenimiento de procesos automatizados, mejorando significativamente la eficiencia operativa. Análisis de Big Data utilizando Python, proporcionando insights valiosos para la toma de decisiones estratégicas. Asesoramiento en la transformación digital de divisiones de negocio, implementando soluciones automatizadas que incrementaron la productividad.',
+        techstack:['VBScript','Python','RPA (Bots)','PostgreSQL','MS SQL','PostgreSQL','Big Data'],
+        aditionalskills:'',
+        link: '',
+    },
+    {
+        date: 'December 2013 – January 2017',
+        company: 'BML Collection Services',
+        title: 'Operation Analyst',
+        description: 'Depuración de bases de datos (CRM Propio). Backup sector Operaciones. Análisis de datos masivos con bases externas. Email marketing: creación de campañas y envío. Costumer Service: atención al cliente vía mail y sms. Seguimiento de facturación de clientes y rendición de pagos.',        
+        techstack: ['Bases de datos', 'CRM', 'Email marketing'],
+        aditionalskills: 'Bases de datos · Análisis de datos · Trabajo en equipo · Minería de datos',
+        link: '',
+    }
+];
+
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ) )
+    }
+ 
+</ol>

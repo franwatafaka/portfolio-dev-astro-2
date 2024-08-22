@@ -1,0 +1,55 @@
+---
+const skills = [
+  'Lenguajes de Programación: Python, NodeJS',
+  'Cloud Services: AWS (Lambda, Cognito, API Gateway, Amplify), GCP (Firebase, Cloud Functions)',
+  'Bases de Datos: PostgreSQL, MS SQL',
+  'CI/CD: GitHub, Bitbucket, AWS Amplify',
+  'Frameworks y Herramientas: Flask, ReactJS, Salesforce (Core, HealthCloud, Apex, LWC, Triggers, SOQL, Force Platform, Apex REST)',
+  'Big Data y Análisis: Análisis de datos masivos, Big Data, Minería de datos'
+];
+
+const personalAptitudes = [
+  'Trabajo en equipo: Colaboro eficazmente con equipos multidisciplinarios, contribuyendo a la creación de soluciones innovadoras y eficientes.',
+  'Resolución de problemas: Enfrento desafíos técnicos con un enfoque analítico y proactivo, buscando siempre la mejor solución posible.',
+  'Adaptabilidad: Me adapto rápidamente a nuevas tecnologías y metodologías, manteniéndome actualizado con las tendencias del sector.',
+  'Comunicación: Mantengo una comunicación clara y efectiva con colegas y clientes, asegurando que todos los proyectos se desarrollen de manera fluida y satisfactoria.'
+];
+
+const interests = [
+  'Además de mi pasión por la programación y la tecnología, disfruto del aprendizaje continuo y la exploración de nuevas herramientas y lenguajes de programación.',
+  'Me interesa la inteligencia artificial y el machine learning, y me mantengo actualizado con los últimos avances en estos campos.'
+];
+---
+
+<section class="text-lg text-pretty">
+  <p>
+    Soy un apasionado desarrollador backend con una sólida experiencia en la creación y optimización de microservicios y arquitecturas escalables. 
+    He trabajado en diversas industrias y proyectos, siempre enfocado en la mejora continua, la eficiencia operativa y la implementación de soluciones innovadoras y seguras.
+     Mi experiencia abarca desde el desarrollo de soluciones serverless en la nube hasta la integración de servicios y la automatización de procesos.
+  </p>
+  <p>
+    A lo largo de mi carrera, he tenido la oportunidad de colaborar con equipos talentosos en entornos dinámicos y desafiantes. Esto me ha permitido desarrollar 
+    una gran capacidad para adaptarme rápidamente a nuevas tecnologías y metodologías, así como para enfrentar y resolver problemas complejos de manera eficiente.
+  </p>
+  <br>
+  <h3 class="font-semibold text-yellow-200 mb-2" >Habilidades Técnicas</h3>
+  <ul>
+    {skills.map(skill => (
+      <li>{skill}</li>
+    ))}
+  </ul>
+  <br>
+  <h3 class="font-semibold text-yellow-200 mb-2" >Aptitudes Personales</h3>
+  <ul>
+    {personalAptitudes.map(aptitude => (
+      <li>{aptitude}</li>
+    ))}
+  </ul>
+
+  <h2>Intereses</h2>
+  <ul>
+    {interests.map(interest => (
+      <li>{interest}</li>
+    ))}
+  </ul>
+</section>
